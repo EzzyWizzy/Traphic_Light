@@ -33,6 +33,9 @@ GPIO.setup(RED_PIN, GPIO.OUT)
 GPIO.setup(GREEN_PIN, GPIO.OUT)
 GPIO.setup(YELLOW_PIN, GPIO.OUT)
 
+while True:
+    traffic_light()
+    
 def traffic_state(red, yellow, green) -> None:
     
     GPIO.output(RED_PIN, red)
@@ -57,6 +60,3 @@ def traffic_light():
     traffic_state(0, 1, 0)
     time.sleep(10)
 
-def run():
-    while True:
-        traffic_light()
