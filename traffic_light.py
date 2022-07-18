@@ -100,18 +100,22 @@ def traffic_light():
     print('EAST WEST ROAD')
     traffic_state(1, 1, 1)
     time.sleep(10)
+    off_all(0, 0, 0)
     #logger.info("YELLOW Lights")
     print('SOUTH NORTH ROAD')
     traffic_state2(1, 1, 1)
     time.sleep(10)
+    off_all(0, 0, 0)
     #logger.info("GREEN Lights")
     print('NORTH SOUTH ROAD')
     traffic_state3(1, 1, 1)
     time.sleep(10)
+    off_all(0, 0, 0)
 
     print('WEST EAST ROAD')
     traffic_state4(1, 1, 1)
     time.sleep(10)
+    off_all(0, 0, 0)
 
     
 while True:
