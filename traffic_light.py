@@ -23,40 +23,80 @@ except Exception as e:
     #logger.error(f"Not running on Raspberry Pi {e}")
     is_raspberry = False
 
-
+#east west (EW)
 RED_PIN = 14 
 GREEN_PIN = 15
 YELLOW_PIN = 18
+
+#east west (WE)
+RED_WE = 2
+GREEN_WE = 3
+YELLOW_WE = 4
+
+#north south (NS)
+RED_NS = 25
+GREEN_NS = 8
+YELLOW_NS = 7
+
+#north south (SN)
+RED_SN = 10
+GREEN_SN = 9
+YELLOW_SN = 11
 
 
 GPIO.setup(RED_PIN, GPIO.OUT)
 GPIO.setup(GREEN_PIN, GPIO.OUT)
 GPIO.setup(YELLOW_PIN, GPIO.OUT)
+GPIO.setup(RED_SN, GPIO.OUT)
+GPIO.setup(GREEN_SN, GPIO.OUT)
+GPIO.setup(YELLOW_SN, GPIO.OUT)
+GPIO.setup(RED_NS, GPIO.OUT)
+GPIO.setup(GREEN_NS, GPIO.OUT)
+GPIO.setup(YELLOW_NS, GPIO.OUT)
+GPIO.setup(RED_WE, GPIO.OUT)
+GPIO.setup(GREEN_WE, GPIO.OUT)
+GPIO.setup(YELLOW_WE, GPIO.OUT)
 
 
     
-def traffic_state(red, yellow, green) -> None:
-    
+def traffic_state(red, yellow, green) -> None:   
     GPIO.output(RED_PIN, red)
     GPIO.output(YELLOW_PIN, yellow)
     GPIO.output(GREEN_PIN, green)
+    
+def traffic_state2(red, yellow, green) -> None:   
+    GPIO.output(RED_SN, red)
+    GPIO.output(GREEN_SN, yellow)
+    GPIO.output(YELLOW_SN, green)
+
+def traffic_state3(red, yellow, green) -> None:   
+    GPIO.output(RED_NS, red)
+    GPIO.output(GREEN_NS, yellow)
+    GPIO.output(YELLOW_NS, green)
+
+def traffic_state4(red, yellow, green) -> None:   
+    GPIO.output(RED_WE, red)
+    GPIO.output(GREEN_WE, yellow)
+    GPIO.output(YELLOW_WE, green)
+
 
 
 def traffic_light():
     #logger.info("RED Lights")
-    print('Red light')
-    traffic_state(1, 0, 0)
-    time.sleep(30)
+    print('EAST WEST ROAD')
+    traffic_state(1, 1, 1)
+    time.sleep(10)
     #logger.info("YELLOW Lights")
-    print('Yellow light')
-    traffic_state(0, 1, 0)
+    print('SOUTH NORTH ROAD')
+    traffic_state2(1, 1, 1)
     time.sleep(10)
     #logger.info("GREEN Lights")
-    print('Green light')
-    traffic_state(0, 0, 1)
+    print('NORTH SOUTH ROAD')
+    traffic_state3(1, 1, 1)
     time.sleep(10)
 
-    traffic_state(0, 1, 0)
+    print('WEST EAST ROAD')
+    traffic_state4(1, 1, 1)
     time.sleep(10)
 while True:
     traffic_light()
