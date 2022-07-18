@@ -39,9 +39,9 @@ GREEN_NS = 8
 YELLOW_NS = 7
 
 #north south (SN)
-RED_SN = 19
-GREEN_SN = 13
-YELLOW_SN = 26
+RED_SN = 13
+GREEN_SN = 26
+YELLOW_SN = 19
 
 
 GPIO.setup(RED_PIN, GPIO.OUT)
