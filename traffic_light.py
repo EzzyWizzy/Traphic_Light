@@ -12,16 +12,16 @@ sys.path.append(os.path.dirname(CURRENT_DIR))
 
 #logger = get_logger(name=__name__)
 
-
+is_raspberry = False
 try:
     import RPi.GPIO as GPIO
     GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
-    
+    is_raspberry = True
 
 except Exception as e:
     #logger.error(f"Not running on Raspberry Pi {e}")
-    
+    is_raspberry = False
 
 
 RED_PIN = 14 
