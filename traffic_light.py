@@ -56,6 +56,20 @@ GPIO.setup(YELLOW_NS, GPIO.OUT)
 GPIO.setup(RED_WE, GPIO.OUT)
 GPIO.setup(GREEN_WE, GPIO.OUT)
 GPIO.setup(YELLOW_WE, GPIO.OUT)
+def off_all(red, yellow, green):
+    GPIO.output(RED_PIN, red)
+    GPIO.output(YELLOW_PIN, yellow)
+    GPIO.output(GREEN_PIN, green)
+    GPIO.output(RED_SN, red)
+    GPIO.output(GREEN_SN, yellow)
+    GPIO.output(YELLOW_SN, green)
+    GPIO.output(RED_NS, red)
+    GPIO.output(GREEN_NS, yellow)
+    GPIO.output(YELLOW_NS, green)
+    GPIO.output(RED_WE, red)
+    GPIO.output(GREEN_WE, yellow)
+    GPIO.output(YELLOW_WE, green)
+
 off_all(0, 0, 0)
 
     
@@ -98,19 +112,7 @@ def traffic_light():
     print('WEST EAST ROAD')
     traffic_state4(1, 1, 1)
     time.sleep(10)
-def off_all(red, yellow, green):
-    GPIO.output(RED_PIN, red)
-    GPIO.output(YELLOW_PIN, yellow)
-    GPIO.output(GREEN_PIN, green)
-    GPIO.output(RED_SN, red)
-    GPIO.output(GREEN_SN, yellow)
-    GPIO.output(YELLOW_SN, green)
-    GPIO.output(RED_NS, red)
-    GPIO.output(GREEN_NS, yellow)
-    GPIO.output(YELLOW_NS, green)
-    GPIO.output(RED_WE, red)
-    GPIO.output(GREEN_WE, yellow)
-    GPIO.output(YELLOW_WE, green)
+
     
 while True:
     traffic_light()
