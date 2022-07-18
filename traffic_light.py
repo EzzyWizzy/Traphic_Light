@@ -8,9 +8,9 @@ from uuid import getnode
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(CURRENT_DIR))
 
-from utils.utils import get_logger
+#from utils.utils import get_logger
 
-logger = get_logger(name=__name__)
+#logger = get_logger(name=__name__)
 
 is_raspberry = False
 try:
@@ -19,7 +19,7 @@ try:
     is_raspberry = True
 
 except Exception as e:
-    logger.error(f"Not running on Raspberry Pi {e}")
+    #logger.error(f"Not running on Raspberry Pi {e}")
     is_raspberry = False
 
 
@@ -40,13 +40,13 @@ def traffic_state(red, yellow, green) -> None:
 
 
 def traffic_light():
-    logger.info("RED Lights")
+    #logger.info("RED Lights")
     traffic_state(1, 0, 0)
     time.sleep(30)
-    logger.info("YELLOW Lights")
+    #logger.info("YELLOW Lights")
     traffic_state(0, 1, 0)
     time.sleep(10)
-    logger.info("GREEN Lights")
+    #logger.info("GREEN Lights")
     traffic_state(0, 0, 1)
     time.sleep(10)
 
