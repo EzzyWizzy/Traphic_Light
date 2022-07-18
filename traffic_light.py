@@ -23,9 +23,9 @@ except Exception as e:
     is_raspberry = False
 
 
-RED_PIN = 17 
-GREEN_PIN = 22
-YELLOW_PIN = 27
+RED_PIN = 14 
+GREEN_PIN = 15
+YELLOW_PIN = 18
 
 if is_raspberry:
     GPIO.setup(RED_PIN, GPIO.OUT)
