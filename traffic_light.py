@@ -80,42 +80,52 @@ def traffic_state(red, yellow, green) -> None:
     
 def traffic_state2(red, yellow, green) -> None:   
     GPIO.output(RED_SN, red)
-    GPIO.output(GREEN_SN, yellow)
-    GPIO.output(YELLOW_SN, green)
+    GPIO.output(GREEN_SN, green)
+    GPIO.output(YELLOW_SN, yellow)
 
 def traffic_state3(red, yellow, green) -> None:   
     GPIO.output(RED_NS, red)
-    GPIO.output(GREEN_NS, yellow)
-    GPIO.output(YELLOW_NS, green)
+    GPIO.output(GREEN_NS, green)
+    GPIO.output(YELLOW_NS, yellow)
 
 def traffic_state4(red, yellow, green) -> None:   
     GPIO.output(RED_WE, red)
-    GPIO.output(GREEN_WE, yellow)
-    GPIO.output(YELLOW_WE, green)
+    GPIO.output(GREEN_WE, green)
+    GPIO.output(YELLOW_WE,yellow)
 
 
 
 def traffic_light():
     #logger.info("RED Lights")
+    #car from east and from west must go while ns must stop
     print('EAST WEST ROAD')
-    traffic_state(1, 1, 1)
+    traffic_state(0, 0, 1)
+    traffic_state4(0, 0, 1)
+    time.sleep(20)
+    off_all(0, 0, 0)
+    traffic_state(0, 1, 0)
+    traffic_state4(0, 1, 0)
+    time.sleep(5)
+    off_all(0, 0, 0)
+    traffic_state(1, 0, 0)
+    traffic_state4(1, 0, 0)
     time.sleep(10)
     off_all(0, 0, 0)
+    
+    
+    
     #logger.info("YELLOW Lights")
-    print('SOUTH NORTH ROAD')
-    traffic_state2(1, 1, 1)
-    time.sleep(10)
-    off_all(0, 0, 0)
+    # print('SOUTH NORTH ROAD')
+    # traffic_state2(1, 1, 1)
+    # time.sleep(10)
+    # off_all(0, 0, 0)
     #logger.info("GREEN Lights")
-    print('NORTH SOUTH ROAD')
-    traffic_state3(1, 1, 1)
-    time.sleep(10)
-    off_all(0, 0, 0)
+    # print('NORTH SOUTH ROAD')
+    # traffic_state3(1, 1, 1)
+    # time.sleep(10)
+    # off_all(0, 0, 0)
 
-    print('WEST EAST ROAD')
-    traffic_state4(1, 1, 1)
-    time.sleep(10)
-    off_all(0, 0, 0)
+    
 
     
 while True:
