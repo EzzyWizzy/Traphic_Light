@@ -112,7 +112,7 @@ def traffic_light():
     traffic_state2(1, 0, 0)
     traffic_state3(1, 0, 0)
     time.sleep(5)
-    
+    print('SOUTH NORTH ROAD')
     off_all(0, 0, 0)
     traffic_state(1, 0, 0)
     traffic_state4(1, 0, 0)
