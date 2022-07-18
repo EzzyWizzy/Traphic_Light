@@ -39,9 +39,9 @@ GREEN_NS = 8
 YELLOW_NS = 7
 
 #north south (SN)
-RED_SN = 10
-GREEN_SN = 9
-YELLOW_SN = 11
+RED_SN = 13
+GREEN_SN = 19
+YELLOW_SN = 26
 
 
 GPIO.setup(RED_PIN, GPIO.OUT)
@@ -119,6 +119,11 @@ def traffic_light():
     traffic_state2(0, 1, 0)
     traffic_state3(0, 1, 0)
     time.sleep(20)
+    traffic_state(1, 0, 0)
+    traffic_state4(1, 0, 0)
+    traffic_state2(0, 0, 1)
+    traffic_state3(0, 0, 1)
+    time.sleep(5)
     off_all(0, 0, 0)
     
     
