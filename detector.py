@@ -40,7 +40,7 @@ while True:
                 traffic_state4(0, 1, 0)
                 traffic_state2(1, 0, 0)
                 traffic_state3(1, 0, 0) 
-            elif classNames[classId-1] == 'laptop'::
+            elif classNames[classId-1] == 'laptop':
                 off_all(0, 0, 0)
                 traffic_state(1, 0, 0)
                 traffic_state4(1, 0, 0)
