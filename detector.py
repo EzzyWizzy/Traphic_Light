@@ -1,7 +1,5 @@
 import cv2
 
-from traffic_light import *
-
 #img = cv2.imread('person.jpg')
 threshold=0.6
 cap = cv2.VideoCapture(1)
