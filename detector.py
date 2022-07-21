@@ -27,6 +27,8 @@ while True:
     success, img =cap.read()
     classIds, confs, bbox = net.detect(img,confThreshold=threshold)
     #print(classIds,bbox)
+    cv2.imshow("output",img)
+    cv2.waitKey(1)
     if len(classIds) != 0:
         for classId, confidence, box in zip(classIds.flatten(), confs.flatten(), bbox):
             cv2.rectangle(img, box, color=(0,255,0), thickness=2)
@@ -47,6 +49,7 @@ while True:
                 traffic_state2(0, 1, 0)
                 traffic_state3(0, 1, 0)
             else:
+                time.sleep(20)
                 print('EAST WEST ROAD')
                 traffic_state(0, 1, 0)
                 traffic_state4(0, 1, 0)
@@ -73,6 +76,5 @@ while True:
                 time.sleep(2)
                 off_all(0, 0, 0)
                 
-    cv2.imshow("output",img)
-    cv2.waitKey(1)
+    
 
