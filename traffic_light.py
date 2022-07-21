@@ -108,7 +108,6 @@ def traffic_light():
     off_all(0, 0, 0)
     traffic_state(0, 0, 1)
     traffic_state4(0, 0, 1)
-    
     traffic_state2(1, 0, 0)
     traffic_state3(1, 0, 0)
     time.sleep(5)
