@@ -21,6 +21,7 @@ net.setInputSize(320,320)
 net.setInputScale(1.0/ 127.5)
 net.setInputMean((127.5,127.5,127.5))
 net.setInputSwapRB(True)
+off_all(0, 0, 0)
 traffic_state(0, 1, 0)
 while True:
     success, img =cap.read()
