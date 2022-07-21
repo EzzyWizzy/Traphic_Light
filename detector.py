@@ -1,5 +1,5 @@
 import cv2
-
+from traffic_light import *
 #img = cv2.imread('person.jpg')
 threshold=0.6
 cap = cv2.VideoCapture(0)
@@ -21,7 +21,7 @@ net.setInputSize(320,320)
 net.setInputScale(1.0/ 127.5)
 net.setInputMean((127.5,127.5,127.5))
 net.setInputSwapRB(True)
-
+traffic_state(0, 1, 0)
 while True:
     success, img =cap.read()
     classIds, confs, bbox = net.detect(img,confThreshold=threshold)
