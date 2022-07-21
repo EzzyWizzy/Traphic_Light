@@ -126,5 +126,5 @@ def traffic_light():
     time.sleep(5)
     off_all(0, 0, 0)
 
-traffic_light()
+
 
