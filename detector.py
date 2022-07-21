@@ -1,5 +1,5 @@
 import cv2
-from traffic_light import off_all,traffic_state
+from traffic_light import *
 #img = cv2.imread('person.jpg')
 threshold=0.6
 cap = cv2.VideoCapture(0)
@@ -34,6 +34,8 @@ while True:
             print(classNames[classId-1])
             cv2.putText(img,str(confidence),(box[0]+10,box[1]+70), cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2) 
             print(classNames[classId-1])
+            if classNames[classId-1] == 'person':
+                traffic_light()
     cv2.imshow("output",img)
     cv2.waitKey(1)
 
