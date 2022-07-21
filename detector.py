@@ -37,31 +37,31 @@ while True:
             print(classNames[classId-1])
             count =count+ 1
             print(count)
-            if count=>1 && count<5:
+            if count >= 1 && count < 5:
                 print('EAST WEST ROAD')
                 traffic_state(0, 1, 0)
                 traffic_state4(0, 1, 0)
                 traffic_state2(1, 0, 0)
                 traffic_state3(1, 0, 0)
-            if count=>5 && count<15:
+            if count >= 5 && count < 15:
                 off_all(0, 0, 0)
                 traffic_state(0, 0, 1)
                 traffic_state4(0, 0, 1)
                 traffic_state2(1, 0, 0)
                 traffic_state3(1, 0, 0)
-            if count=>15 && count<25:
+            if count >= 15 && count < 25:
                 print('SOUTH NORTH ROAD')
                 off_all(0, 0, 0)
                 traffic_state(1, 0, 0)
                 traffic_state4(1, 0, 0)
                 traffic_state2(0, 1, 0)
                 traffic_state3(0, 1, 0)
-            if count=>25 && count<30:
+            if count >= 25 && count<30:
                 traffic_state(1, 0, 0)
                 traffic_state4(1, 0, 0)
                 traffic_state2(0, 0, 1)
                 traffic_state3(0, 0, 1)
-            if count=>30:
+            if count >= 30:
                 count=0
                 off_all(0, 0, 0)
             if classNames[classId-1] == 'car':
