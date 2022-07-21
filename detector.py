@@ -35,7 +35,7 @@ while True:
             print(classNames[classId-1])
             cv2.putText(img,str(confidence),(box[0]+10,box[1]+70), cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2) 
             print(classNames[classId-1])
-            count =count+ 1
+            
             print(count)
             if count >= 1 and count < 5:
                 print('EAST WEST ROAD')
@@ -79,6 +79,7 @@ while True:
                 traffic_state3(0, 1, 0)
                 time.sleep(5)
     time.sleep(1)   
+    count =count+ 1
     cv2.imshow("output",img)
     cv2.waitKey(1)
 
