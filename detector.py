@@ -41,7 +41,6 @@ while True:
                 traffic_state2(1, 0, 0)
                 traffic_state3(1, 0, 0) 
             else:
-                classNames[classId-1] == 'person':
                 off_all(0, 0, 0)
                 traffic_state(1, 0, 0)
                 traffic_state4(1, 0, 0)
