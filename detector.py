@@ -25,7 +25,6 @@ net.setInputMean((127.5,127.5,127.5))
 net.setInputSwapRB(True)
 
 while True:
-    traffic_light()
     success, img =cap.read()
     classIds, confs, bbox = net.detect(img,confThreshold=threshold)
     #print(classIds,bbox)
