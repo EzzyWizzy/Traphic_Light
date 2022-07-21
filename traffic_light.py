@@ -125,21 +125,6 @@ def traffic_light():
     traffic_state3(0, 0, 1)
     time.sleep(5)
     off_all(0, 0, 0)
-    
-    
-    
-    #logger.info("YELLOW Lights")
-    # print('SOUTH NORTH ROAD')
-    # traffic_state2(1, 1, 1)
-    # time.sleep(10)
-    # off_all(0, 0, 0)
-    #logger.info("GREEN Lights")
-    # print('NORTH SOUTH ROAD')
-    # traffic_state3(1, 1, 1)
-    # time.sleep(10)
-    # off_all(0, 0, 0)
-
-    
 
     
 while True:
