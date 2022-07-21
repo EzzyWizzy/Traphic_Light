@@ -71,11 +71,13 @@ while True:
                 traffic_state2(1, 0, 0)
                 traffic_state3(1, 0, 0) 
             elif classNames[classId-1] == 'person':
+                print('Interrupted')
                 off_all(0, 0, 0)
                 traffic_state(1, 0, 0)
                 traffic_state4(1, 0, 0)
                 traffic_state2(0, 1, 0)
                 traffic_state3(0, 1, 0)
+                time.sleep(5)
                            
     cv2.imshow("output",img)
     cv2.waitKey(1)
