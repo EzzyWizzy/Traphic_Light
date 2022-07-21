@@ -23,6 +23,7 @@ net.setInputMean((127.5,127.5,127.5))
 net.setInputSwapRB(True)
 off_all(0, 0, 0)
 traffic_state(0, 1, 0)
+count =0;
 while True:
     success, img =cap.read()
     classIds, confs, bbox = net.detect(img,confThreshold=threshold)
@@ -34,6 +35,8 @@ while True:
             print(classNames[classId-1])
             cv2.putText(img,str(confidence),(box[0]+10,box[1]+70), cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2) 
             print(classNames[classId-1])
+            count++
+            print(count)
             if classNames[classId-1] == 'car':
                 off_all(0, 0, 0)
                 traffic_state(0, 1, 0)
