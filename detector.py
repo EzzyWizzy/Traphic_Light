@@ -78,7 +78,7 @@ while True:
                 traffic_state2(0, 1, 0)
                 traffic_state3(0, 1, 0)
                 time.sleep(5)
-                           
+    time.sleep(1)   
     cv2.imshow("output",img)
     cv2.waitKey(1)
 
