@@ -34,8 +34,21 @@ while True:
             print(classNames[classId-1])
             cv2.putText(img,str(confidence),(box[0]+10,box[1]+70), cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2) 
             print(classNames[classId-1])
-            if classNames[classId-1] == 'person':
+            if classNames[classId-1] == 'car':
+                off_all(0, 0, 0)
+                traffic_state(0, 1, 0)
+                traffic_state4(0, 1, 0)
+                traffic_state2(1, 0, 0)
+                traffic_state3(1, 0, 0) 
+            elif classNames[classId-1] == 'laptop'::
+                off_all(0, 0, 0)
+                traffic_state(1, 0, 0)
+                traffic_state4(1, 0, 0)
+                traffic_state2(0, 1, 0)
+                traffic_state3(0, 1, 0)
+            else:
                 traffic_light()
+                
     cv2.imshow("output",img)
     cv2.waitKey(1)
 
