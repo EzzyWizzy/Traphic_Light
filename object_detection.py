@@ -35,7 +35,7 @@ while True:
             cv2.putText(img,str(confidence),(box[0]+10,box[1]+70), cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2) 
             print(classNames[classId-1])
             count =count+ 1
-            print(count)
+            #print(count)
             
       
     cv2.imshow("output",img)
