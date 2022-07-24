@@ -22,11 +22,11 @@ net.setInputMean((127.5,127.5,127.5))
 net.setInputSwapRB(True)
 
 cap = cv2.VideoCapture(0)
-cap.set(3,320)
-cap.set(4,240)
+cap.set(3,160)
+cap.set(4,120)
 cap1 = cv2.VideoCapture(2)
-cap1.set(3,320)
-cap1.set(4,240)
+cap1.set(3,160)
+cap1.set(4,120)
 
 
 def show_img0(img):
