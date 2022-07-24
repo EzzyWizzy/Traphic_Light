@@ -22,11 +22,11 @@ net.setInputMean((127.5,127.5,127.5))
 net.setInputSwapRB(True)
 
 cap = cv2.VideoCapture(0)
-cap.set(3,160)
-cap.set(4,120)
+cap.set(3,640)
+cap.set(4,480)
 cap1 = cv2.VideoCapture(2)
-cap1.set(3,160)
-cap1.set(4,120)
+cap1.set(3,640)
+cap1.set(4,480)
 
 
 def show_img0(img):
@@ -61,8 +61,8 @@ while True:
     
     show_img0(img)
     show_img1(img1)
-    cv2.imshow("Camera 1",img)
-    cv2.imshow("Camera 2",img1)
+    cv2.imshow("output 1",img)
+    cv2.imshow("output 2",img1)
     cv2.waitKey(1)
     
     
