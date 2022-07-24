@@ -1,10 +1,10 @@
 import cv2
 
 #img = cv2.imread('person.jpg')
-threshold=0.6
+threshold=0.5
 cap = cv2.VideoCapture(0)
-cap.set(3,160)
-cap.set(4,120)
+cap.set(3,640)
+cap.set(4,480)
 
 classNames=[]
 classFile='model_data/coco.names'
