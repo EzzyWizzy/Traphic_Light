@@ -22,8 +22,8 @@ net.setInputMean((127.5,127.5,127.5))
 net.setInputSwapRB(True)
 
 cap = cv2.VideoCapture(0)
-cap.set(3,640)
-cap.set(4,480)
+cap.set(3,320)
+cap.set(4,240)
 
 
 
